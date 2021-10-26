@@ -84,7 +84,7 @@ namespace GUIPBD2
             this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button3.Location = new System.Drawing.Point(584, 205);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(108, 96);
+            this.button3.Size = new System.Drawing.Size(113, 96);
             this.button3.TabIndex = 3;
             this.button3.Text = "ALUMNOEMPRESA";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
