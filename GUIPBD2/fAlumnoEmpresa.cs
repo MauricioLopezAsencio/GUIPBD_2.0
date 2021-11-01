@@ -33,7 +33,8 @@ namespace GUIPBD2
                 // TODO: esta línea de código carga datos en la tabla 'pBDDataSet.Alumno' Puede moverla o quitarla según sea necesario.
                 this.alumnoTableAdapter.Fill(this.pBDDataSet.Alumno);
                 // TODO: esta línea de código carga datos en la tabla 'pBDDataSet.VAlumnoEmpresa' Puede moverla o quitarla según sea necesario.
-                this.vAlumnoEmpresaTableAdapter.Fill(this.pBDDataSet.VAlumnoEmpresa);
+                this.vAlumnoEmpresaTableAdapter.Fill(this.pBDDataSet.vAlumnoEmpresa);
+                
 
                 this.ModoEdicion("lectura");
             }

@@ -24,6 +24,7 @@ namespace GUIPBD2
             this.Validate();
             this.empresaBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.pBDDataSet);
+           
 
         }
 

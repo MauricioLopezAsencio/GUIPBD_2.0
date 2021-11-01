@@ -52,8 +52,6 @@ namespace GUIPBD2
             this.iDAlumnoEmpresaTextBox = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.vAlumnoEmpresaTableAdapter = new GUIPBD2.PBDDataSetTableAdapters.VAlumnoEmpresaTableAdapter();
-            this.tableAdapterManager = new GUIPBD2.PBDDataSetTableAdapters.TableAdapterManager();
             this.alumnoTableAdapter = new GUIPBD2.PBDDataSetTableAdapters.AlumnoTableAdapter();
             this.empresaTableAdapter = new GUIPBD2.PBDDataSetTableAdapters.EmpresaTableAdapter();
             this.vAlumnoEmpresaBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
@@ -79,6 +77,8 @@ namespace GUIPBD2
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.alumnoEmpresaTableAdapter = new GUIPBD2.PBDDataSetTableAdapters.AlumnoEmpresaTableAdapter();
             this.fKAlumnoEmpresaEmpresaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableAdapterManager = new GUIPBD2.PBDDataSetTableAdapters.TableAdapterManager();
+            this.vAlumnoEmpresaTableAdapter = new GUIPBD2.PBDDataSetTableAdapters.vAlumnoEmpresaTableAdapter();
             iDAlumnoEmpresaLabel = new System.Windows.Forms.Label();
             anioInicioLabel = new System.Windows.Forms.Label();
             anioFinLabel = new System.Windows.Forms.Label();
@@ -310,18 +310,6 @@ namespace GUIPBD2
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // vAlumnoEmpresaTableAdapter
-            // 
-            this.vAlumnoEmpresaTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.AlumnoEmpresaTableAdapter = null;
-            this.tableAdapterManager.AlumnoTableAdapter = this.alumnoTableAdapter;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.EmpresaTableAdapter = this.empresaTableAdapter;
-            this.tableAdapterManager.UpdateOrder = GUIPBD2.PBDDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
             // alumnoTableAdapter
             // 
             this.alumnoTableAdapter.ClearBeforeFill = true;
@@ -533,6 +521,21 @@ namespace GUIPBD2
             this.fKAlumnoEmpresaEmpresaBindingSource.DataMember = "FK_AlumnoEmpresa_Empresa";
             this.fKAlumnoEmpresaEmpresaBindingSource.DataSource = this.empresaBindingSource;
             // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.AlumnoEmpresaTableAdapter = null;
+            this.tableAdapterManager.AlumnoTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.EmpresaTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = GUIPBD2.PBDDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuarioTableAdapter = null;
+            this.tableAdapterManager.vAlumnoEmpresaTableAdapter = null;
+            // 
+            // vAlumnoEmpresaTableAdapter
+            // 
+            this.vAlumnoEmpresaTableAdapter.ClearBeforeFill = true;
+            // 
             // fAlumnoEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -578,7 +581,6 @@ namespace GUIPBD2
         private System.Windows.Forms.Button btnGuardar;
         private PBDDataSet pBDDataSet;
         private System.Windows.Forms.BindingSource vAlumnoEmpresaBindingSource;
-        private PBDDataSetTableAdapters.VAlumnoEmpresaTableAdapter vAlumnoEmpresaTableAdapter;
         private PBDDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator vAlumnoEmpresaBindingNavigator;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
@@ -614,5 +616,6 @@ namespace GUIPBD2
         private System.Windows.Forms.NumericUpDown anioFinNumericUpDown;
         private System.Windows.Forms.NumericUpDown anioInicioNumericUpDown;
         private System.Windows.Forms.BindingSource fKAlumnoEmpresaEmpresaBindingSource;
+        private PBDDataSetTableAdapters.vAlumnoEmpresaTableAdapter vAlumnoEmpresaTableAdapter;
     }
 }
