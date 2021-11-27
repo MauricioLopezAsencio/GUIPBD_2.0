@@ -79,6 +79,7 @@ namespace GUIPBD2
             this.fKAlumnoEmpresaEmpresaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableAdapterManager = new GUIPBD2.PBDDataSetTableAdapters.TableAdapterManager();
             this.vAlumnoEmpresaTableAdapter = new GUIPBD2.PBDDataSetTableAdapters.vAlumnoEmpresaTableAdapter();
+            this.btnReporte = new System.Windows.Forms.Button();
             iDAlumnoEmpresaLabel = new System.Windows.Forms.Label();
             anioInicioLabel = new System.Windows.Forms.Label();
             anioFinLabel = new System.Windows.Forms.Label();
@@ -126,6 +127,7 @@ namespace GUIPBD2
             // pnlBotones
             // 
             this.pnlBotones.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBotones.BackgroundImage")));
+            this.pnlBotones.Controls.Add(this.btnReporte);
             this.pnlBotones.Controls.Add(this.btnBorrar);
             this.pnlBotones.Controls.Add(this.btnEditar);
             this.pnlBotones.Controls.Add(this.btnInsertar);
@@ -536,6 +538,17 @@ namespace GUIPBD2
             // 
             this.vAlumnoEmpresaTableAdapter.ClearBeforeFill = true;
             // 
+            // btnReporte
+            // 
+            this.btnReporte.Image = ((System.Drawing.Image)(resources.GetObject("btnReporte.Image")));
+            this.btnReporte.Location = new System.Drawing.Point(374, 12);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(96, 78);
+            this.btnReporte.TabIndex = 5;
+            this.btnReporte.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
             // fAlumnoEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -617,5 +630,6 @@ namespace GUIPBD2
         private System.Windows.Forms.NumericUpDown anioInicioNumericUpDown;
         private System.Windows.Forms.BindingSource fKAlumnoEmpresaEmpresaBindingSource;
         private PBDDataSetTableAdapters.vAlumnoEmpresaTableAdapter vAlumnoEmpresaTableAdapter;
+        private System.Windows.Forms.Button btnReporte;
     }
 }

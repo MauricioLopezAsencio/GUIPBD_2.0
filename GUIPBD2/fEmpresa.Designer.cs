@@ -34,6 +34,7 @@ namespace GUIPBD2
             System.Windows.Forms.Label razonSocialLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fEmpresa));
             this.pnlBotones = new System.Windows.Forms.Panel();
+            this.btnReporte = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnInsertar = new System.Windows.Forms.Button();
@@ -93,6 +94,7 @@ namespace GUIPBD2
             // pnlBotones
             // 
             this.pnlBotones.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBotones.BackgroundImage")));
+            this.pnlBotones.Controls.Add(this.btnReporte);
             this.pnlBotones.Controls.Add(this.btnBorrar);
             this.pnlBotones.Controls.Add(this.btnEditar);
             this.pnlBotones.Controls.Add(this.btnInsertar);
@@ -101,6 +103,17 @@ namespace GUIPBD2
             this.pnlBotones.Name = "pnlBotones";
             this.pnlBotones.Size = new System.Drawing.Size(816, 100);
             this.pnlBotones.TabIndex = 0;
+            // 
+            // btnReporte
+            // 
+            this.btnReporte.Image = ((System.Drawing.Image)(resources.GetObject("btnReporte.Image")));
+            this.btnReporte.Location = new System.Drawing.Point(380, 12);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(96, 78);
+            this.btnReporte.TabIndex = 3;
+            this.btnReporte.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // btnBorrar
             // 
@@ -213,6 +226,8 @@ namespace GUIPBD2
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.EmpresaTableAdapter = this.empresaTableAdapter;
             this.tableAdapterManager.UpdateOrder = GUIPBD2.PBDDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuarioTableAdapter = null;
+            this.tableAdapterManager.vAlumnoEmpresaTableAdapter = null;
             // 
             // empresaBindingNavigator
             // 
@@ -404,5 +419,6 @@ namespace GUIPBD2
         private System.Windows.Forms.TextBox razonSocialTextBox;
         private System.Windows.Forms.TextBox iDEmpresaTextBox;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button btnReporte;
     }
 }

@@ -75,6 +75,7 @@ namespace GUIPBD2
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnReporte = new System.Windows.Forms.Button();
             iDAlumnoLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             primerApellidoLabel = new System.Windows.Forms.Label();
@@ -158,6 +159,7 @@ namespace GUIPBD2
             // pnlBotones
             // 
             this.pnlBotones.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBotones.BackgroundImage")));
+            this.pnlBotones.Controls.Add(this.btnReporte);
             this.pnlBotones.Controls.Add(this.btnBorrar);
             this.pnlBotones.Controls.Add(this.btnEditar);
             this.pnlBotones.Controls.Add(this.btnInsertar);
@@ -331,6 +333,8 @@ namespace GUIPBD2
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.EmpresaTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = GUIPBD2.PBDDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuarioTableAdapter = null;
+            this.tableAdapterManager.vAlumnoEmpresaTableAdapter = null;
             // 
             // alumnoBindingNavigator
             // 
@@ -503,6 +507,17 @@ namespace GUIPBD2
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // btnReporte
+            // 
+            this.btnReporte.Image = ((System.Drawing.Image)(resources.GetObject("btnReporte.Image")));
+            this.btnReporte.Location = new System.Drawing.Point(377, 12);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(96, 78);
+            this.btnReporte.TabIndex = 4;
+            this.btnReporte.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
             // fAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -572,5 +587,6 @@ namespace GUIPBD2
         private System.Windows.Forms.TextBox nombreTextBox;
         private System.Windows.Forms.TextBox iDAlumnoTextBox;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button btnReporte;
     }
 }
