@@ -7,12 +7,13 @@
     <ProjectGuid>{A9794106-EEA9-43F0-B046-DFC2B636E029}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>GUIPBD2</RootNamespace>
-    <AssemblyName>GUIPBD2</AssemblyName>
+    <AssemblyName>GUIPBD2.0</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <PublishUrl>C:\Users\Mau\Desktop\</PublishUrl>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Mau\Desktop\App\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -22,10 +23,10 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -53,6 +54,18 @@
   <PropertyGroup>
     <Win32Resource>
     </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>E517E189058EFDB2B81089C0F76FC63CE36A1926</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>GUIPBD2_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
@@ -182,6 +195,7 @@
     <EmbeddedResource Include="rptAlumno.rdlc" />
     <EmbeddedResource Include="rptAlumnoEmpresa.rdlc" />
     <EmbeddedResource Include="rptEmpresa.rdlc" />
+    <None Include="GUIPBD2_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="PBDDataSet.xsc">
       <DependentUpon>PBDDataSet.xsd</DependentUpon>
